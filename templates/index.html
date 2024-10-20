@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+        #chatHistory {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            background: #fff;
+            margin: 20px auto;
+            padding: 10px;
+            display: inline-block;
+            text-align: left;
+        }
+        /* Add dark mode styles */
+        .dark-mode {
+            background-color: #1e1e1e;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+    <form method="POST" action="/login">
+        <input type="text" name="username" placeholder="Enter your username" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <h2>Chat History</h2>
+    <div id="chatHistory">
+        {% for message in chat_history %}
+            <div>{{ message.username }}: {{ message.msg }} ({{ message.timestamp }})</div>
+        {% endfor %}
+    </div>
+</body>
+</html>

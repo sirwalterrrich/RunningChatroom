@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+}
+
+#messages {
+    max-height: 400px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#message_input {
+    width: 80%;
+    padding: 10px;
+}
+
+#send_button {
+    padding: 10px;
+}
+/* Existing styles */
+
+.dark-mode {
+    background-color: #1e1e1e; /* Dark background */
+    color: white; /* Light text color */
+}
+
+/* Specific styles for the user list and messages in dark mode */
+.dark-mode #user-list {
+    background-color: #2a2a2a; /* Darker background for user list */
+    border: 1px solid #444; /* Darker border */
+}
+
+.dark-mode #messages {
+    background-color: #2a2a2a; /* Darker background for messages */
+    border: 1px solid #444; /* Darker border */
+    color: white; /* Ensure text is white */
+}
+
+.dark-mode .username {
+    color: lightblue; /* Optional: Change username color in dark mode */
+}
+
+.dark-mode .timestamp {
+    color: #aaa; /* Light gray for timestamps */
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Username</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="username-container">
+        <form method="POST">
+            <h2>Enter Your Username</h2>
+            <input type="text" name="username" required>
+            <button type="submit">Join Chat</button>
+        </form>
+    </div>
+</body>
+</html>
